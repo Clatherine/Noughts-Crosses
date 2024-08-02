@@ -1,0 +1,163 @@
+#whole {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  background-color: azure;
+  margin: 0;
+  padding: 0;
+width: 100%;
+min-height: 100vh;
+  flex: 1
+}
+#header {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-content: center;
+  background-color: white;
+  border-bottom: black solid;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000
+
+}
+h1{
+  font-size: 7vw;
+  margin: 0px ;
+  padding: 0px;
+  display: flex;
+  justify-content: center;
+}
+#main_body{
+display: flex;
+flex-direction: row;
+width: 100%;
+margin-top: 13vw;
+height: calc(100vh - 13vw);
+flex: 1;
+align-items: stretch;
+
+}
+.half {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: stretch;
+  flex: 1;
+ align-self: stretch;
+  }
+#text {
+  display: flex;
+  flex-direction: column;
+  align-self: stretch;
+  flex:1;
+  gap: 20px;
+}
+
+#text_div{
+  padding: 0px 40px
+}
+@media (max-width: 850px) {
+  #main_body{
+     flex-direction: column;
+     }
+     #text {
+        margin: 0 auto;
+        gap: 0px
+     }
+     #text_div{
+        padding: 10px 30px
+      }
+}
+
+#right {
+  flex: 1;
+  margin: 0 auto;
+  flex-direction: column;
+}
+
+#text p {
+  display: flex;
+  justify-content: left;
+  align-content: left;
+  text-align: left;
+  margin: 5px;
+  font-size: 1.2em;
+}
+
+button {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  font-size: clamp(60px, 5vw, 100px);
+  padding: 10px; 
+  border: black solid;
+  background-color: white;
+}
+
+button:hover {
+cursor: pointer
+}
+
+#board {
+   display: grid;
+   grid-template-rows: repeat(3, minmax(100px, 7vw));
+   grid-template-columns: repeat(3, minmax(100px, 7vw));
+   justify-content: center;
+   align-content: center;
+   margin: 10px;
+}
+
+
+:disabled {
+   background-color: white;
+   color: black;
+   border: black solid;
+}
+
+#turn {
+   font-size: 50px;
+   text-align: center;
+}
+
+.result{
+   font-size: 5vw;
+   text-align: center;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-content: center;
+   padding: 0px;
+}
+
+.result p {
+  margin: 10px
+}
+#play_again button {
+  box-sizing: content-box;
+  width: 130px;
+  margin: 30px auto;
+  font-size: 20px;
+  padding: 20px;
+  border-radius: 25px;
+  background-color: rgb(185, 241, 241);
+  border: white solid;
+  color: rgb(66, 66, 66);
+}
+@media (max-width: 850px) {
+  #result button {margin: 20px auto;}
+  #play_again button {
+     margin: 0px auto
+  }
+}
+#result button:hover {
+  border: blue solid;
+}
+.green{
+   background-color: green;
+   color: white;
+}
